@@ -7,6 +7,8 @@ class product(models.Model):
     name = models.CharField('nombre', max_length=100, blank=False, null=False)
     description = models.TextField('descripcion', blank=False, null=False)
     price = models.DecimalField('precio', max_digits=10, decimal_places=2, blank=False, null=False, default=0.00)
+    image1 = models.URLField(max_length=1000, default='https://i.postimg.cc/NMdGGd18/imagen-lista-producto-sin-foto-2-25fa77.png', blank=False, null=False)
+    image2 = models.URLField(max_length=1000, default='https://i.postimg.cc/NMdGGd18/imagen-lista-producto-sin-foto-2-25fa77.png', blank=False, null=False)
     discount = models.IntegerField('descuento', blank=False, null=False, default=0)
 
 class purchase(models.Model):
